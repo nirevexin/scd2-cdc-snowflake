@@ -56,5 +56,5 @@ CALL process_scd_cdc(5);
 ```
 
 ## Author
-Alexey Vershinin Dudin
+Alexey Vershinin Dudin \
 Data Engineer | Data Analyst
