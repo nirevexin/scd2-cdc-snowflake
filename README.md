@@ -43,13 +43,6 @@ scd2-cdc-snowflake/
 
 This pattern is the industry-standard way to maintain SCD2 from CDC while remaining fully idempotent.
 
-## Possible 
-
-Storage optimization: Archive old CDC (> X days) to S3/Parquet via Snowflake Unload or Snowpipe. Use clustering + search optimization on SCD table.
-Data Lake alternative: Apache Iceberg or Apache Hudi on S3 + Snowflake External Tables / Iceberg tables. Functional Kimball + periodic snapshots also viable.
-Querying SCD2: Provided in bonus_track.sql.
-Data quality checks: 4 automated SQL checks (no overlapping periods, single active record, consistency with CDC, etc.).
-
 ## How to Run
 
 ```sql
