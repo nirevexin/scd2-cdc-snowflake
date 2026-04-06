@@ -6,10 +6,12 @@ Robust implementation of a Slowly Changing Dimension Type 2 (`product_status_hst
 
 ```
 scd2-cdc-snowflake/
-├── README.md
-├── setup.sql
-├── process_scd_cdc.sql ← Main stored procedure
-└── data_quality_checks.sql
+├── 01_setup.sql
+├── 02_process_scd_cdc.sql ← Main stored procedure
+├── 03_data_quality_checks.sql
+├── 04_additional_considerations.md
+├── LICENSE
+└── README.md
 ```
 
 ## Technologies
