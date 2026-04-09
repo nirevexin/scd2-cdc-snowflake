@@ -66,7 +66,7 @@ BEGIN
             OR prev_change_type = 'DELETE'
        ));
 
-    -- 7. Final SCD2 using MERGE (modern Snowflake pattern)
+    -- 7. Final SCD2 using MERGE 
     MERGE INTO product_status_hst AS tgt
     USING (
         SELECT
@@ -81,7 +81,7 @@ BEGIN
                 change_time AS close_time
             FROM flagged
             WHERE change_type = 'DELETE'
-               OR (change_type = 'UPDATE' AND status != prev_status)   -- ← FIXED
+               OR (change_type = 'UPDATE' AND status != prev_status)   
         ) c
           ON s.product_key = c.product_key
          AND c.close_time > s.scd_start_time
